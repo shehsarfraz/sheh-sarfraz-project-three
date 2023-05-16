@@ -1,37 +1,17 @@
-import './App.css';
+import React from 'react';
+import RandomDrink from './RandomDrink';
 
-
-function App() {
-
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-  .then( (response) => {
-    return response.json()
-  })
-  .then( (jsonResult) => {
-    console.log('It worked', jsonResult)
-  })
-
-
-  // fetch('www.thecocktaildb.com/api/json/v1/1/random.php')
-  // .then(function(response){
-  //   return response.json();
-  // })
-  // .then(function(jsonResult){
-  //   console.log('It worked!', jsonResult);
-  // })
-
-
-// Set up fetch request 
-// Pull random recipe's name, ingredients, instructions and picture 
-// Display above within it's own component and render that component within app
-// Create function using terniaries to allow user to clear current drink or show recipe 
-
-
+const App = () => {
   return (
-    <div className="App">
-
+    <div className="container2">
+      <h1>🍹 Random Drink Generator 🍸</h1>
+      <div className="container1">
+      <RandomDrink />
+      <p>Click the button above to get a random alcoholic beverage.</p>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
+
