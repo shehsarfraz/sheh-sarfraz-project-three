@@ -7,7 +7,7 @@ const App = () => {
       <h1>🍹 Random Drink Generator 🍸</h1>
       <div className="container1">
       <RandomDrink />
-      <p>Click the button above to get a random alcoholic beverage.</p>
+      <p>Click the button above to get a random beverage.</p>
       </div>
     </div>
   );
