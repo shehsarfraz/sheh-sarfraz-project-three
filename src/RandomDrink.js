@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const RandomDrink = () => {
     const [randomDrink, setRandomDrink] = useState(null);
-    const [loading, setLoading] = useState(false);
 
     const fetchRandomDrink = async () => {
-        setLoading(true); // Set loading state to true
         try {
             const response = await axios.get(
                 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
